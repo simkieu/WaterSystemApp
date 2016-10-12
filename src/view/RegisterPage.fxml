@@ -13,9 +13,9 @@
       <Label layoutX="68.0" layoutY="161.0" text="Password" />
       <TextField fx:id="username" layoutX="217.0" layoutY="104.0" />
       <TextField fx:id="password" layoutX="217.0" layoutY="153.0" />
-      <ComboBox layoutX="217.0" layoutY="204.0" prefWidth="150.0" />
+      <ComboBox fx:id="accountType" layoutX="217.0" layoutY="204.0" prefWidth="150.0" />
       <Label layoutX="43.0" layoutY="209.0" text="Account Type" />
-      <TextField layoutX="217.0" layoutY="259.0" />
+      <TextField fx:id="name" layoutX="217.0" layoutY="259.0" />
       <Label layoutX="94.0" layoutY="266.0" text="Name" />
       <Button layoutX="196.0" layoutY="329.0" mnemonicParsing="false" text="Register"
               onAction="#RegisterPressed" />

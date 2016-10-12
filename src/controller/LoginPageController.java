@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.RegisteredUsersList;
 
 /**
  * Created by simkieu on 9/29/16.
@@ -27,7 +28,6 @@ public class LoginPageController {
 
     @FXML
     public void LoginRequest() {
-
         if (isInputValid()) {
             CurrentLoggedInUser.getInstance().setUsername(username.getText());
             mainApplication.showMainAppPage();
@@ -49,8 +49,12 @@ public class LoginPageController {
         else if (password.getText() == null || password.getText().length() == 0) {
             errorMessage += "No valid major entered!\n";
         }
-        else if (!username.getText().equals("user") || !password.getText().equals("pass")) {
-            errorMessage += "username and password do not match!\n";
+        else if (!RegisteredUsersList.getInstance().getRegisteredUsersList().containsKey(username.getText())) {
+            errorMessage += "This username has not been registered yet!\n";
+        }
+        else if (!password.getText().equals(RegisteredUsersList.getInstance()
+                .getRegisteredUsersList().get(username.getText()).getPassword())) {
+            errorMessage += "Your password for this account is incorrect!\n";
         }
 
         //no error message means success / good input

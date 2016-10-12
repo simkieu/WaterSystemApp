@@ -26,14 +26,14 @@ public class User {
     public String getName() { return _name.get(); }
     public void setName(String name) { _name.set(name); }
 
-    public String getUserNam() {return _userID.get(); }
-    public void setUserName(String major) { _userID.set(major); }
+    public String getUserName() {return _userID.get(); }
+    public void setUserName(String userName) { _userID.set(userName); }
 
     public String getPassword() {return _password.get(); }
-    public void setPassword(String major) { _password.set(major); }
+    public void setPassword(String password) { _password.set(password); }
 
-    public AccountType getClassStanding() { return _accountType.get(); }
-    public void setClassStanding(AccountType classStanding) { _accountType.set(classStanding); }
+    public AccountType getAccountType() { return _accountType.get(); }
+    public void setAccountType(AccountType accountType) { _accountType.set(accountType); }
     public ObjectProperty getClassStandingProperty() { return _accountType; }
     /**
      * Make a new student
