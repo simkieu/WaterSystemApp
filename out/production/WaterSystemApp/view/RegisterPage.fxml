@@ -17,8 +17,9 @@
       <Label layoutX="43.0" layoutY="209.0" text="Account Type" />
       <TextField layoutX="217.0" layoutY="259.0" />
       <Label layoutX="94.0" layoutY="266.0" text="Name" />
-      <Button layoutX="196.0" layoutY="329.0" mnemonicParsing="false" text="Register" />
-      <Button layoutX="355.0" layoutY="328.0" mnemonicParsing="false" text="Cancel" />
+      <Button layoutX="196.0" layoutY="329.0" mnemonicParsing="false" text="Register"
+              onAction="#RegisterPressed" />
+      <Button layoutX="355.0" layoutY="328.0" mnemonicParsing="false" text="Cancel" onAction="#CancelPressed" />
 
    </children>
 </AnchorPane>

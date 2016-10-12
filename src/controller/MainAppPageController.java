@@ -25,4 +25,9 @@ public class MainAppPageController {
     public void LogoutPressed() {
         mainApplication.showWelcomePage();
     }
+
+    @FXML
+    public void EditProfilePressed() {
+        mainApplication.showEditProfilePage();
+    }
 }

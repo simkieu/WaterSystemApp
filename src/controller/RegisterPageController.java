@@ -26,4 +26,14 @@ public class RegisterPageController {
     public void setMainApp(MainFXApplication main) {
         mainApplication = main;
     }
+
+    @FXML
+    public void CancelPressed() {
+        mainApplication.showWelcomePage();
+    }
+
+    @FXML
+    public void RegisterPressed() {
+        
+    }
 }

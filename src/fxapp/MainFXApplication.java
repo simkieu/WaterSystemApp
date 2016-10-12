@@ -1,9 +1,6 @@
 package fxapp;
 
-import controller.LoginPageController;
-import controller.RegisterPageController;
-import controller.WelcomePageController;
-import controller.MainAppPageController;
+import controller.*;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -103,6 +100,33 @@ public class MainFXApplication extends Application {
 
             // Set the Main App title
             mainScreen.setTitle("Register Page");
+
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(rootLayout);
+            mainScreen.setScene(scene);
+            mainScreen.show();
+
+
+        } catch (IOException e) {
+            //error on load, so log it
+            LOGGER.log(Level.SEVERE, "Failed to find the fxml file for MainScreen!!");
+            e.printStackTrace();
+        }
+    }
+
+    public void showEditProfilePage() {
+        try {
+            // Load root layout from fxml file.i
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainFXApplication.class.getResource("../view/EditProfilePage.fxml"));
+            rootLayout = loader.load();
+
+            // Give the controller access to the main app.
+            EditProfilePageController controller = loader.getController();
+            controller.setMainApp(this);
+
+            // Set the Main App title
+            mainScreen.setTitle("Edit Profile Page");
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
