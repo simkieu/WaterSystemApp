@@ -9,13 +9,13 @@ public class CurrentLoggedInUser {
 
     public static CurrentLoggedInUser getInstance() { return instance; }
 
-    private String username;
+    private User user;
 
-    public String getUsername() {
-        return this.username;
+    public User getCurrentUser() {
+        return this.user;
     }
 
-    public void setUsername(String name) {
-        this.username = name;
+    public void setUser(User newUser) {
+        this.user = newUser;
     }
 }

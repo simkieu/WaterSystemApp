@@ -18,7 +18,7 @@ public class MainAppPageController {
 
     public void setMainApp(MainFXApplication main) {
         mainApplication = main;
-        loggedUser.setText(CurrentLoggedInUser.getInstance().getUsername());
+        loggedUser.setText(CurrentLoggedInUser.getInstance().getCurrentUser().getName());
     }
 
     @FXML

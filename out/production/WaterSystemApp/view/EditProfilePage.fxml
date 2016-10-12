@@ -6,22 +6,20 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.76-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controller.EditProfilePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditProfilePageController">
    <children>
       <Label layoutX="283.0" layoutY="29.0" text="Your Profile" />
       <Label layoutX="68.0" layoutY="109.0" text="Username" />
       <Label layoutX="68.0" layoutY="161.0" text="Password" />
-      <TextField fx:id="username" layoutX="217.0" layoutY="104.0" />
       <TextField fx:id="password" layoutX="217.0" layoutY="153.0" />
-      <ComboBox layoutX="217.0" layoutY="204.0" prefWidth="150.0" />
+      <ComboBox fx:id="accountType" layoutX="217.0" layoutY="204.0" prefWidth="150.0" />
       <Label layoutX="43.0" layoutY="209.0" text="Account Type" />
-      <TextField layoutX="217.0" layoutY="259.0" />
+      <TextField fx:id="name" layoutX="217.0" layoutY="259.0" />
       <Label layoutX="94.0" layoutY="266.0" text="Name" />
-      <Button layoutX="196.0" layoutY="329.0" mnemonicParsing="false" text="Update Profile" />
-      <Button layoutX="355.0" layoutY="328.0" mnemonicParsing="false" text="Cancel" />
+      <Button layoutX="196.0" layoutY="329.0" mnemonicParsing="false" onAction="#UpdateProfilePressed" text="Update Profile" />
+      <Button layoutX="355.0" layoutY="328.0" mnemonicParsing="false" onAction="#CancelPressed" text="Cancel" />
+      <Label fx:id="username" layoutX="217.0" layoutY="109.0" prefHeight="17.0" prefWidth="150.0"
+             text="Label" />
 
    </children>
 </AnchorPane>

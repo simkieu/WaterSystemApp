@@ -17,6 +17,11 @@ public class RegisteredUsersList {
 
     private Map<String, User> databaseUserList = new HashMap<String, User>();
 
+    private RegisteredUsersList() {
+        User user1 = new User("Sim Kieu", "simkieu", "hello");
+        databaseUserList.put("user", user1);
+    }
+
     public Map<String, User> getRegisteredUsersList() {
         return this.databaseUserList;
     }
