@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SubmitWaterReportPageController">
+   <children>
+      <Label layoutX="230.0" layoutY="21.0" text="Submit Water Report" />
+      <Label layoutX="157.0" layoutY="109.0" text="Latitude" />
+      <Label layoutX="143.0" layoutY="158.0" text="Longitude" />
+      <TextField fx:id="latitudeField" layoutX="217.0" layoutY="104.0" />
+      <TextField fx:id="longitudeField" layoutX="217.0" layoutY="153.0" />
+      <ComboBox fx:id="waterType" layoutX="217.0" layoutY="204.0" prefHeight="31.0" prefWidth="187.0" />
+      <Label layoutX="180.0" layoutY="209.0" text="Type" />
+      <Label layoutX="144.0" layoutY="267.0" text="Condition" />
+      <Button layoutX="217.0" layoutY="335.0" mnemonicParsing="false" onAction="#SubmitPressed" text="Submit" />
+      <Button layoutX="340.0" layoutY="335.0" mnemonicParsing="false" onAction="#CancelPressed" text="Cancel" />
+      <TextField fx:id="locationName" layoutX="217.0" layoutY="59.0" />
+      <Label layoutX="110.0" layoutY="64.0" text="Location Name" />
+      <ComboBox fx:id="waterCondition" layoutX="217.0" layoutY="262.0" prefHeight="31.0" prefWidth="187.0" />
+
+   </children>
+</AnchorPane>
