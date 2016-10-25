@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
@@ -6,3 +7,14 @@
     </modules>
   </component>
 </project>
+||||||| merged common ancestors
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WaterSystemApp.iml" filepath="$PROJECT_DIR$/WaterSystemApp.iml" />
+    </modules>
+  </component>
+</project>
+>>>>>>> 138b102e662284af48158a53c07c65836084cb55
