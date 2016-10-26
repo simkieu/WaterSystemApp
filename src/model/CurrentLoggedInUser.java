@@ -11,10 +11,18 @@ public class CurrentLoggedInUser {
 
     private User user;
 
+    /**
+     * Get current user
+     * @return the current user
+     */
     public User getCurrentUser() {
         return this.user;
     }
 
+    /**
+     * Set user to another
+     * @param newUser the new user to be set
+     */
     public void setUser(User newUser) {
         this.user = newUser;
     }

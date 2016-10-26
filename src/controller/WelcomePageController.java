@@ -9,6 +9,10 @@ public class WelcomePageController {
 
     private MainFXApplication mainApplication;
 
+    /**
+     * Set main app
+     * @param main Set main app to <main>
+     */
     public void setMainApp(MainFXApplication main) {
         mainApplication = main;
     }

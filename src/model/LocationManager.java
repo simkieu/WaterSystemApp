@@ -11,6 +11,10 @@ public class LocationManager
 {
     private ArrayList<Location> locations;
 
+    /**
+     * Add a locaction
+     * @param location the location to be added
+     */
     public void addLocation(Location location) {
         locations.add(location);
     }

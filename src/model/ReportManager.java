@@ -16,10 +16,20 @@ public class ReportManager {
 
     private ArrayList<WaterReport> reports;
 
+    /**
+     * Constructor
+     */
     public ReportManager() {
         reports = new ArrayList<WaterReport>();
     }
 
+    /**
+     * Create a report
+     * @param reporter the reporter
+     * @param location the location of the report
+     * @param type      type of the water
+     * @param condition the condition of the water
+     */
     public void generateReport(User reporter, Location location, WaterType type, WaterCondition condition) {
 
         int id = reports.size();
@@ -32,7 +42,7 @@ public class ReportManager {
     }
 
     /**
-     *
+     *  Get all reports
      * @return List of all reports
      */
     public ArrayList<WaterReport> getReports() {

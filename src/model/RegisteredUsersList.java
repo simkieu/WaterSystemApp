@@ -17,6 +17,9 @@ public class RegisteredUsersList {
 
     private Map<String, User> databaseUserList = new HashMap<String, User>();
 
+    /**
+     * Create users
+     */
     private RegisteredUsersList() {
         User user1 = new User("Sim Kieu", "simkieu", "hello");
         User user2 = new User("Kyle Bulkley", "kyle", "kyle");
@@ -24,10 +27,19 @@ public class RegisteredUsersList {
         databaseUserList.put("kyle", user2);
     }
 
+    /**
+     * Get Map of registered User
+     * @return the map contains the Name and the username
+     */
     public Map<String, User> getRegisteredUsersList() {
         return this.databaseUserList;
     }
 
+    /**
+     * Add new user
+     * @param aUser the new user to be added
+     * @return true if can be added, false otherwise
+     */
     public boolean addUser(User aUser) {
         if (!databaseUserList.containsKey(aUser.getUserName())) {
             databaseUserList.put(aUser.getUserName(), aUser);
