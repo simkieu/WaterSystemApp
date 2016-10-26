@@ -27,6 +27,11 @@ public class MainAppPageController {
     }
 
     @FXML
+    public void ViewMapsPressed() {
+        mainApplication.showViewMaps();
+    }
+
+    @FXML
     public void EditProfilePressed() {
         mainApplication.showEditProfilePage();
     }

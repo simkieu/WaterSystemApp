@@ -1,5 +1,7 @@
 package model;
 import java.util.Date;
+import com.lynden.gmapsfx.javascript.object.LatLong;
+
 
 /**
  * User: Kyle
@@ -26,7 +28,9 @@ public class WaterReport {
         this.condition = condition;
 
     }
-
+    public LatLong getLatLong() {
+        return location.getLatLong();
+    }
     public String toString() {
         return (location + ": " + type + " / " + condition + "  [#" + id + ", " + reporter + ", " + date + "]");
     }

@@ -34,6 +34,32 @@ public class MainFXApplication extends Application {
         showWelcomePage();
     }
 
+    public void showViewMaps() {
+        try {
+            // Load root layout from fxml file.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainFXApplication.class.getResource("../view/MapsPage.fxml"));
+            rootLayout = loader.load();
+
+            // Give the controller access to the main app.
+            ViewMapController controller = loader.getController();
+            controller.setMainApp(this);
+
+            // Set the Main App title
+            mainScreen.setTitle("Map!");
+
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(rootLayout);
+            mainScreen.setScene(scene);
+            mainScreen.show();
+
+
+        } catch (IOException e) {
+            //error on load, so log it
+            LOGGER.log(Level.SEVERE, "Failed to find the fxml file for Maps!!");
+            e.printStackTrace();
+        }
+    }
     public void showWelcomePage() {
         try {
             // Load root layout from fxml file.

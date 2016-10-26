@@ -9,11 +9,6 @@ import javafx.scene.control.ListView;
 import javafx.collections.ObservableList;
 import java.util.ArrayList;
 
-/**
- * User: Kyle
- * Date: 10/18/16
- * Time: 10:34 PM
- */
 public class ViewReportsPageController {
 
     private MainFXApplication mainApplication;
