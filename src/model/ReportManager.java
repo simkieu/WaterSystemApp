@@ -31,6 +31,10 @@ public class ReportManager {
 
     }
 
+    /**
+     *
+     * @return List of all reports
+     */
     public ArrayList<WaterReport> getReports() {
         return reports;
     }

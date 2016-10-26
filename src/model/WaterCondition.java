@@ -14,10 +14,18 @@ public enum WaterCondition
 
     private String name;
 
+    /**
+     * Constructor
+     * @param the condition of the water
+     */
     WaterCondition(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return condition of the water in String type
+     */
     public String toString() {
         return name;
     }

@@ -16,10 +16,18 @@ public enum WaterType
 
     private String name;
 
+    /**
+     * Constructor
+     * @param the name of the water
+     */
     WaterType(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return name of the water in String type
+     */
     public String toString() {
         return name;
     }

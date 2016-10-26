@@ -57,9 +57,12 @@ public class ViewMapController implements Initializable, MapComponentInitialized
         @Override
         public void initialize(URL url, ResourceBundle rb) {
             mapsView.addMapInializedListener(this);
-            address.bind(addressTextField.textProperty());
         }
 
+        /**
+         *  Set the main Application to <main>
+         * @param The main application
+         */
         public void setMainApp(MainFXApplication main) {
             mainApplication = main;
         }
@@ -106,29 +109,13 @@ public class ViewMapController implements Initializable, MapComponentInitialized
         }
 
         @FXML
+        /**
+         * Set function for back Button
+         */
         private void backPressed() {
             mainApplication.showMainAppPage();
         }
-        @FXML
-        public void addressTextFieldAction(ActionEvent event) {
-            geocodingService.geocode(address.get(), (GeocodingResult[] results, GeocoderStatus status) -> {
 
-                LatLong latLong = null;
 
-                if( status == GeocoderStatus.ZERO_RESULTS) {
-                    Alert alert = new Alert(Alert.AlertType.ERROR, "No matching address found");
-                    alert.show();
-                    return;
-                } else if( results.length > 1 ) {
-                    Alert alert = new Alert(Alert.AlertType.WARNING, "Multiple results found, showing the first one.");
-                    alert.show();
-                    latLong = new LatLong(results[0].getGeometry().getLocation().getLatitude(), results[0].getGeometry().getLocation().getLongitude());
-                } else {
-                    latLong = new LatLong(results[0].getGeometry().getLocation().getLatitude(), results[0].getGeometry().getLocation().getLongitude());
-                }
 
-                map.setCenter(latLong);
-
-            });
-        }
 }

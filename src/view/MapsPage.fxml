@@ -7,7 +7,6 @@
 <AnchorPane id="AnchorPane" prefHeight="500" prefWidth="750" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="controller.ViewMapController">
    <children>
       <GoogleMapView fx:id="mapsView" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0"/>
-      <TextField fx:id="addressTextField" onAction="#addressTextFieldAction" prefHeight="27.0" prefWidth="274.0" promptText="Address" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
       <Button layoutX="630.0" layoutY="26.0" mnemonicParsing="false" onAction="#backPressed" text="Back" />
 
    </children>

@@ -14,11 +14,17 @@ public class WelcomePageController {
     }
 
     @FXML
+    /**
+     * Open login Page when press Login Button
+     */
     public void LoginPressed() {
         mainApplication.showLoginPage();
     }
 
     @FXML
+    /**
+     * Register Button when pressed
+     */
     public void RegisterPressed() {
         mainApplication.showRegisterPage();
     }

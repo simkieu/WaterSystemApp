@@ -18,6 +18,15 @@ public class WaterReport {
     private WaterType type;
     private WaterCondition condition;
 
+    /**
+     * Construcotr
+     * @param the ID of the report
+     * @param the person who reported
+     * @param Date of the report
+     * @param location of the report
+     * @param type of the water
+     * @param condition of the water
+     */
     public WaterReport(int id, String reporter, Date date, Location location, WaterType type, WaterCondition condition) {
 
         this.id = id;
@@ -28,9 +37,19 @@ public class WaterReport {
         this.condition = condition;
 
     }
+
+    /**
+     *
+     * @return The latittude and longtitude of the report
+     */
     public LatLong getLatLong() {
         return location.getLatLong();
     }
+
+    /**
+     *
+     * @return the string represent the information of the report
+     */
     public String toString() {
         return (location + ": " + type + " / " + condition + "  [#" + id + ", " + reporter + ", " + date + "]");
     }

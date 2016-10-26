@@ -17,6 +17,9 @@ public class ViewReportsPageController {
     private ListView<String> list;
 
     @FXML
+    /**
+     * Initialize
+     */
     private void initialize() {
 
         ObservableList<String> items = FXCollections.observableArrayList();
@@ -29,11 +32,18 @@ public class ViewReportsPageController {
         list.setItems(items);
     }
 
+    /**
+     * Set the main app
+     * @param Set the main application to <main>
+     */
     public void setMainApp(MainFXApplication main) {
         mainApplication = main;
     }
 
     @FXML
+    /**
+     * Back button
+     */
     private void backPressed() {
         mainApplication.showMainAppPage();
     }
